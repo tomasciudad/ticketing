@@ -44,7 +44,7 @@ const NewTicket = () => {
           />
         </div>
         <div className="form-group">
-          <label>Price</label>
+          <label>Price!</label>
           <input
             value={price}
             onBlur={onBlur}
