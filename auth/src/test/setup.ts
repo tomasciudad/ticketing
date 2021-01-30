@@ -3,10 +3,10 @@ import mongoose from 'mongoose';
 import { app } from '../app';
 
 let mongo: any;
-jest.setTimeout(30000)
+
 
 beforeAll(async() => {
-
+  jest.setTimeout(30000);
   process.env.JWT_KEY = 'asdf';
 
   mongo = new MongoMemoryServer();
