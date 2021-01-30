@@ -6,7 +6,7 @@ deploy:
       - ./infra/k8s/*
       - ./infra/k8s-dev/*
 build:
-  #local:
+  #local2:
   #  push: false
   googleCloudBuild:
     projectId: ticketing-dev-299423
