@@ -4,6 +4,7 @@ import { app } from '../app';
 
 let mongo: any;
 
+
 beforeAll(async() => {
 
   process.env.JWT_KEY = 'asdf';
@@ -18,9 +19,11 @@ beforeAll(async() => {
 });
 
 beforeEach(async () => {
+  jest.clearAllMocks();
   const collections = await mongoose.connection.db.collections();
   
-  for (let collection of collections){
+  for (const key in collections) {
+    const collection = collections[key];
     await collection.deleteMany({});
   }
 });
