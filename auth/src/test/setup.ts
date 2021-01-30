@@ -6,7 +6,7 @@ let mongo: any;
 
 
 beforeAll(async() => {
-  jest.setTimeout(30000);
+
   process.env.JWT_KEY = 'asdf';
 
   mongo = new MongoMemoryServer();
